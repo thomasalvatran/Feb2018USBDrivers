@@ -3,15 +3,15 @@ USB Driver for USB Mass Storage
 Please see http://www.tovantran.com/blog/?s=usb
 
 Plug USB stick check dmesg 
-[171267.445656] sd 36:0:0:0: Attached scsi generic sg6 type 0
-[171267.447065] sd 36:0:0:0: [sdf] 31285248 512-byte logical blocks: (16.0 GB/14.9 GiB)
-[171267.453994] sd 36:0:0:0: [sdf] Write Protect is off
-[171267.453996] sd 36:0:0:0: [sdf] Mode Sense: 43 00 00 00
-[171267.465916] sd 36:0:0:0: [sdf] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
-[171267.492901]  sdf:
-[171267.519182] sd 36:0:0:0: [sdf] Attached SCSI removable disk
-[172011.617460] usb 3-2.1: USB disconnect, device number 11
-[172011.622093] sd 36:0:0:0: [sdf] Synchronizing SCSI cache
+[171267.445656] sd 36:0:0:0: Attached scsi generic sg6 type 0 <br>
+[171267.447065] sd 36:0:0:0: [sdf] 31285248 512-byte logical blocks: (16.0 GB/14.9 GiB)<br>
+[171267.453994] sd 36:0:0:0: [sdf] Write Protect is off<br>
+[171267.453996] sd 36:0:0:0: [sdf] Mode Sense: 43 00 00 00<br>
+[171267.465916] sd 36:0:0:0: [sdf] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA<br>
+[171267.492901]  sdf:<br>
+[171267.519182] sd 36:0:0:0: [sdf] Attached SCSI removable disk<br>
+[172011.617460] usb 3-2.1: USB disconnect, device number 11<br>
+[172011.622093] sd 36:0:0:0: [sdf] Synchronizing SCSI cache<br>
 
 Change mass_storage_write.c and mass_storage_read.c accordingly /dev/sdf and recompile
 Data to write:
