@@ -13,36 +13,36 @@ Plug USB stick check dmesg
 [172011.617460] usb 3-2.1: USB disconnect, device number 11<br>
 [172011.622093] sd 36:0:0:0: [sdf] Synchronizing SCSI cache<br>
 
-Change mass_storage_write.c and mass_storage_read.c accordingly /dev/sdf and recompile
-Data to write:
+Change mass_storage_write.c and mass_storage_read.c accordingly /dev/sdf and recompile<br>
+Data to write:<br>
 char *write_buffer = "Mass storage write test. led1on, led1off, led2on, led2off\r\n";
 
-Run:
-~/Ctest/k_r/kernel_hi11Bulk$ sudo ./mass_storage_write
-/dev/sdf mounted on /media/66CC-0275
-Data written to the file
-
-tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ sudo ./mass_storage_read
-/dev/sdf mounted on /media/66CC-0275
-data read from usb: Mass storage write test. led1on, led1off, led2on, led2off
+Run:<br>
+~/Ctest/k_r/kernel_hi11Bulk$ sudo ./mass_storage_write<br>
+/dev/sdf mounted on /media/66CC-0275<br>
+Data written to the file<br>
+<br>
+~/Ctest/k_r/kernel_hi11Bulk$ sudo ./mass_storage_read<br>
+/dev/sdf mounted on /media/66CC-0275<br>
+data read from usb: Mass storage write test. led1on, led1off, led2on, led2off<br>
 
 led1on
 led1off
 led2on
 led2off
-tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ 
+~/Ctest/k_r/kernel_hi11Bulk$ <br>
 
-mkdir /media/usb
-sudo mount /dev/sdf /media/usb
+mkdir /media/usb<br>
+sudo mount /dev/sdf /media/usb<br>
 
-ls /media/usb
-hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information
-
-You can see my_data.txt 
-
-Plugin USB kernel auto mount when click mount prompt at default for example /media/66CC-9275 
-tovantran@kubuntu-vm:/media/66CC-0275$ ls
-hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information
+ls /media/usb<br>
+hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
+<br>
+You can see my_data.txt <br>
+<br>
+Plugin USB kernel auto mount when click mount prompt at default for example /media/66CC-9275 <br>
+/media/66CC-0275$ ls<br><br>
+hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
 
 
 
