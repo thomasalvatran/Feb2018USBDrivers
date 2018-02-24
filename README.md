@@ -46,7 +46,7 @@ hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
 
 To run wireshark:
 sudo modprobe usbmon
-gksu wireshark then select interface capture for example usbmon3
+gksu wireshark then select interface capture for example usbmon3. Here is usb protocol snapshot when ./mass_storage_write
 From wireshar monitor usbmon3
 21	4.443707	host	3.12.1	USBMS	95	SCSI: Write(10) LUN: 0x00 (LBA: 0x00808070, Len: 1)
 22	4.444065	3.12.1	host	USB	64	URB_BULK out
