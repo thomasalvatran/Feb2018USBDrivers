@@ -153,7 +153,10 @@ kernel_hi11Bulk$ sudo dd if=/dev/sdh bs=512 count=1 skip=2 |xxd
 1+0 records out
 512 bytes (512 B) copied, 0.000533462 s, 960 kB/s
 
-
+Kernel load module: klm directory can read/write sector the same using linux kernel module
+insmod pen_driver.ko
+(check dmesg to see if it has been inserted correctly)
+./userapp (following the instruction to read and write into USB)
 </code>
 
 
