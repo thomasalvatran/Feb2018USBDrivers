@@ -1,7 +1,7 @@
 # Feb2018USBDrivers
 USB Driver for USB Mass Storage
 Please see http://www.tovantran.com/blog/?s=usb
-
+<pre><code>
 Plug USB stick check dmesg 
 [171267.445656] sd 36:0:0:0: Attached scsi generic sg6 type 0 <br>
 [171267.447065] sd 36:0:0:0: [sdf] 31285248 512-byte logical blocks: (16.0 GB/14.9 GiB)<br>
@@ -44,6 +44,6 @@ Plugin USB kernel auto mount when click mount prompt at default for example /med
 /media/66CC-0275$ ls<br><br>
 hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
 
-
+</code>
 
 
