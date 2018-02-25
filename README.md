@@ -178,6 +178,19 @@ check: dmesg to see if a read or a write is happened
 [21506.818493] this is a test
 [21512.095124] pen_read--------this is a test
 </pre></code>
+This is the device driver which using system calls:
+<table>
+   <tr>
+        <td><code>copy_to_user</code></td>
+      <td><code>Copies a block of data from the kernel to user space</code></td>
+   </tr>
+   <tr>
+        <td><code>copy_from_user</code></td>
+      <td><code>Copies a block of data from user space to the kernel</code></td>
+                                               
+   </tr>
+</table>
+
 Note: ./userapp (need sudo otherwise error /dev/pen0 does not exit or lock by another process)<br>
 
 
