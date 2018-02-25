@@ -8,7 +8,7 @@ penapp is read write raw data into usb
 penapp_write is write raw data into usb
 penapp_read is read raw data from usb
 
-<u><b>Write a file into USB</b></u>
+__**Write a file into USB**__
 Plug USB stick check dmesg 
 [171267.445656] sd 36:0:0:0: Attached scsi generic sg6 type 0 
 [171267.447065] sd 36:0:0:0: [sdf] 31285248 512-byte logical blocks: (16.0 GB/14.9 GiB)
