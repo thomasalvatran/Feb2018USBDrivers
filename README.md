@@ -160,10 +160,10 @@ Kernel load module: klm directory can read/write sector the same using linux ker
 insmod pen_driver.ko
 (check dmesg to see if it has been inserted correctly)
 ./userapp (following the instruction to read and write into USB)
-
-Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and 
-to find out the root directory:
-
+</code></pre>
+Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and <br>
+to find out the root directory:<br>
+<pre><code>
 tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ sudo dd if=/dev/sdg bs=512 count=1 skip=32768 |xxd
 0000000: 4220 0049 006e 0066 006f 000f 0072 7200  B .I.n.f.o...rr.
 0000010: 6d00 6100 7400 6900 6f00 0000 6e00 0000  m.a.t.i.o...n...
@@ -187,6 +187,6 @@ tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ sudo dd if=/dev/sdg bs=512 cou
 0000130: 6300 0000 ffff ffff ffff 0000 ffff ffff  c...............
 0000140: 4845 4c4c 4f20 2020 4320 2020 0064 8540  HELLO   C   .d.@
 0000150: 594c 594c 0800 8540 594c 0a00 3f00 0000  YLYL...@YL..?..
-</code>
+</code></pre>
 
 
