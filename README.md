@@ -57,7 +57,7 @@ __**To run wireshark:**__<br>
 sudo modprobe usbmon <br>
 gksu wireshark  <br>
 then select interface capture for example usbmon3. Here is usb protocol snapshot when ./mass_storage_write
-<pre><code>
+<pre>
 From wireshar monitor usbmon3
 21	4.443707	host	3.12.1	USBMS	95	SCSI: Write(10) LUN: 0x00 (LBA: 0x00808070, Len: 1)
 22	4.444065	3.12.1	host	USB	64	URB_BULK out
@@ -65,9 +65,10 @@ From wireshar monitor usbmon3
 24	4.445949	3.12.1	host	USB	64	URB_BULK out
 25	4.445958	host	3.12.2	USB	64	URB_BULK in
 26	4.446294	3.12.2	host	USBMS	77	
-</code></pre>
+</pre>
 <br>
-__RAW data__ into sector 2 of USB using USB product ID. <br>
+__**RAW write data into sector:**__<br>
+The following will write into sector 2 of USB using USB product ID. <br>
 handle = libusb_open_device_with_vid_pid(NULL, 0x05dc, 0xa838); <br>
 <pre><code>
 - penapp 
