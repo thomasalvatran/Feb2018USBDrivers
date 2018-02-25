@@ -157,12 +157,30 @@ kernel_hi11Bulk$ sudo dd if=/dev/sdh bs=512 count=1 skip=2 |xxd
 1+0 records in
 1+0 records out
 512 bytes (512 B) copied, 0.000533462 s, 960 kB/s
-
-Kernel load module: klm directory can read/write sector the same using linux kernel module
-insmod pen_driver.ko
-(check dmesg to see if it has been inserted correctly)
-./userapp (following the instruction to read and write into USB)
 </code></pre>
+
+__Kernel load module: klm directory can read/write sector the same using linux kernel module__<br>
+Finally, linux kernel mode /klm <br>
+make<br>
+pen_driver.ko this linux kernel module<br>
+Unplugged USB<br>
+sudo rmmod usb_storage<br>
+insmod pen_driver.ko  (insert our driver to replace usb_storage so probe_function will work correctly)<br>
+Plugged USB stick<br>
+check: dmesg  to see if everything ok<br>
+sudo ./userapp  following insstruction to read and write into USB <br>
+check: dmesg to see if a read or a write is happened
+<pre><code>
+   dmesg | tail
+[21472.003053] Minor obtained: 0
+[21472.003066] usbcore: registered new interface driver pen_driver
+[21506.735067] pen_write-------
+[21506.818493] this is a test
+[21512.095124] pen_read--------this is a test
+</pre></code>
+Note: ./userapp (need sudo otherwise error /dev/pen0 does not exit or lock by another process)<br>
+
+
 Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and <br>
 to find out the root directory:<br>
 <pre><code>
@@ -190,5 +208,4 @@ tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ sudo dd if=/dev/sdg bs=512 cou
 0000140: 4845 4c4c 4f20 2020 4320 2020 0064 8540  HELLO   C   .d.@
 0000150: 594c 594c 0800 8540 594c 0a00 3f00 0000  YLYL...@YL..?..
 </code></pre>
-
 
