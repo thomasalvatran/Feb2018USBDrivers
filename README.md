@@ -67,7 +67,7 @@ From wireshar monitor usbmon3
 26	4.446294	3.12.2	host	USBMS	77	
 </pre>
 <br>
-__**RAW write data into sector:**__<br>
+<br>RAW write data into sector:</b><br>
 The following will write into sector 2 of USB using USB product ID. <br>
 handle = libusb_open_device_with_vid_pid(NULL, 0x05dc, 0xa838); <br>
 <pre><code>
