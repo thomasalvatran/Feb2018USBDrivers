@@ -161,7 +161,8 @@ insmod pen_driver.ko
 (check dmesg to see if it has been inserted correctly)
 ./userapp (following the instruction to read and write into USB)
 
-Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and to find out the root directory:
+Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and 
+to find out the root directory:
 
 tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ sudo dd if=/dev/sdg bs=512 count=1 skip=32768 |xxd
 0000000: 4220 0049 006e 0066 006f 000f 0072 7200  B .I.n.f.o...rr.
