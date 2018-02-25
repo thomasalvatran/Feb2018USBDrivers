@@ -3,11 +3,11 @@ USB Driver for USB Mass Storage
 Please see http://www.tovantran.com/blog/?s=usb
 and https://www.pjrc.com/tech/8051/ide/fat32.html
 
-klm is kernel linux module for usb stick
-mass_storage_write mass_storage_read read and write file into usb
-penapp is read write raw data into usb
-penapp_write is write raw data into usb
-penapp_read is read raw data from usb
+- mass_storage_write mass_storage_read read and write file into usb
+- penapp is read write raw data into usb
+- penapp_write is write raw to a sector data into usb
+- penapp_read is read raw form a sector data from usb
+- klm is kernel linux module for usb stick
 
 <b>Write a file into USB</b>
 <pre><code>
