@@ -159,6 +159,31 @@ Kernel load module: klm directory can read/write sector the same using linux ker
 insmod pen_driver.ko
 (check dmesg to see if it has been inserted correctly)
 ./userapp (following the instruction to read and write into USB)
+
+Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and to find the root directory:
+tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ sudo dd if=/dev/sdg bs=512 count=1 skip=32768 |xxd
+0000000: 4220 0049 006e 0066 006f 000f 0072 7200  B .I.n.f.o...rr.
+0000010: 6d00 6100 7400 6900 6f00 0000 6e00 0000  m.a.t.i.o...n...
+0000020: 0153 0079 0073 0074 0065 000f 0072 6d00  .S.y.s.t.e...rm.
+0000030: 2000 5600 6f00 6c00 7500 0000 6d00 6500   .V.o.l.u...m.e.
+0000040: 5359 5354 454d 7e31 2020 2016 0084 7d60  SYSTEM~1   ...}`
+0000050: 484c 484c 0000 8060 484c 0300 0000 0000  HLHL...`HL......
+0000060: 484f 5354 5320 2020 5458 5420 18b9 a860  HOSTS   TXT ...`
+0000070: 484c 484c 0000 7867 0949 0600 c803 0000  HLHL..xg.I......
+0000080: 425f 0042 0042 0042 005f 000f 0030 3800  B_.B.B.B._...08.
+0000090: 4700 4200 2e00 6900 6d00 0000 6700 0000  G.B...i.m...g...
+00000a0: 0173 0064 0063 0061 0072 000f 0030 6400  .s.d.c.a.r...0d.
+00000b0: 5f00 6200 6100 6300 6b00 0000 7500 7000  _.b.a.c.k...u.p.
+00000c0: 5344 4341 5244 7e31 494d 4720 0064 7a85  SDCARD~1IMG .dz.
+00000d0: 484c 594c 0000 7a85 484c 0800 ffff ffff  HLYL..z.HL......
+00000e0: 416d 0079 005f 0064 0061 000f 002b 7400  Am.y._.d.a...+t.
+00000f0: 6100 2e00 7400 7800 7400 0000 0000 ffff  a...t.x.t.......
+0000100: 4d59 5f44 4154 4120 5458 5420 0000 9766  MY_DATA TXT ...f
+0000110: 584c 584c 0800 9766 584c 0900 9d01 0000  XLXL...fXL......
+0000120: 4168 0065 006c 006c 006f 000f 00dd 2e00  Ah.e.l.l.o......
+0000130: 6300 0000 ffff ffff ffff 0000 ffff ffff  c...............
+0000140: 4845 4c4c 4f20 2020 4320 2020 0064 8540  HELLO   C   .d.@
+0000150: 594c 594c 0800 8540 594c 0a00 3f00 0000  YLYL...@YL..?..
 </code>
 
 
