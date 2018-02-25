@@ -2,7 +2,7 @@
 USB Driver for USB Mass Storage
 Please see http://www.tovantran.com/blog/?s=usb
 and https://www.pjrc.com/tech/8051/ide/fat32.html
-<pre><code>
+
 klm is kernel linux module for usb stick
 mass_storage_write mass_storage_read read and write file into usb
 penapp is read write raw data into usb
@@ -10,7 +10,7 @@ penapp_write is write raw data into usb
 penapp_read is read raw data from usb
 
 <b>Write a file into USB</b>
-
+<pre><code>
 Plug USB stick check dmesg 
 [171267.445656] sd 36:0:0:0: Attached scsi generic sg6 type 0 
 [171267.447065] sd 36:0:0:0: [sdf] 31285248 512-byte logical blocks: (16.0 GB/14.9 GiB)
@@ -52,7 +52,7 @@ You can see my_data.txt
 Plugin USB kernel auto mount when click mount prompt at default for example /media/66CC-9275 <br>
 /media/66CC-0275$ ls<br><br>
 hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
-
+</pre></code>
 To run wireshark:
 sudo modprobe usbmon
 gksu wireshark 
@@ -68,7 +68,7 @@ From wireshar monitor usbmon3
 
 <b>RAW data</b> into sector 2 of USB using USB product ID.
 handle = libusb_open_device_with_vid_pid(NULL, 0x05dc, 0xa838); 
-
+<code><pre>
 - penapp 
 sudo ./penapp
 [sudo] password for tovantran: 
