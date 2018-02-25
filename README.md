@@ -52,7 +52,7 @@ You can see my_data.txt
 Plugin USB kernel auto mount when click mount prompt at default for example /media/66CC-9275 <br>
 /media/66CC-0275$ ls<br><br>
 hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
-</pre></code>
+</code></pre>
 To run wireshark:
 sudo modprobe usbmon
 gksu wireshark 
@@ -66,9 +66,9 @@ From wireshar monitor usbmon3
 25	4.445958	host	3.12.2	USB	64	URB_BULK in
 26	4.446294	3.12.2	host	USBMS	77	
 
-<b>RAW data</b> into sector 2 of USB using USB product ID.
-handle = libusb_open_device_with_vid_pid(NULL, 0x05dc, 0xa838); 
-<code><pre>
+<b>RAW data</b> into sector 2 of USB using USB product ID. <br>
+handle = libusb_open_device_with_vid_pid(NULL, 0x05dc, 0xa838); <br>
+<pre><code>
 - penapp 
 sudo ./penapp
 [sudo] password for tovantran: 
