@@ -8,7 +8,7 @@ penapp is read write raw data into usb
 penapp_write is write raw data into usb
 penapp_read is read raw data from usb
 
-### Write a file into USB ###
+<b>Write a file into USB</b>
 
 Plug USB stick check dmesg 
 [171267.445656] sd 36:0:0:0: Attached scsi generic sg6 type 0 
@@ -65,7 +65,7 @@ From wireshar monitor usbmon3
 25	4.445958	host	3.12.2	USB	64	URB_BULK in
 26	4.446294	3.12.2	host	USBMS	77	
 
-<u><b>RAW data</b></u> into sector 2 of USB using USB product ID.
+<b>RAW data</b> into sector 2 of USB using USB product ID.
 handle = libusb_open_device_with_vid_pid(NULL, 0x05dc, 0xa838); 
 
 - penapp 
