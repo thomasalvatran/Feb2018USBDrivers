@@ -8,6 +8,7 @@ penapp is read write raw data into usb
 penapp_write is write raw data into usb
 penapp_read is read raw data from usb
 
+<u><b>Write a file into USB</b></u>
 Plug USB stick check dmesg 
 [171267.445656] sd 36:0:0:0: Attached scsi generic sg6 type 0 
 [171267.447065] sd 36:0:0:0: [sdf] 31285248 512-byte logical blocks: (16.0 GB/14.9 GiB)
@@ -41,11 +42,11 @@ led2off
 mkdir /media/usb<br>
 sudo mount /dev/sdf /media/usb<br>
 
-ls /media/usb<br>
+ls /media/usb
 hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
-<br>
-You can see my_data.txt <br>
-<br>
+
+You can see my_data.txt 
+
 Plugin USB kernel auto mount when click mount prompt at default for example /media/66CC-9275 <br>
 /media/66CC-0275$ ls<br><br>
 hosts.txt  my_data.txt  sdcard_backup_BBB_8GB.img  System Volume Information<br>
@@ -63,7 +64,7 @@ From wireshar monitor usbmon3
 25	4.445958	host	3.12.2	USB	64	URB_BULK in
 26	4.446294	3.12.2	host	USBMS	77	
 
-RAW data into sector 2 of USB using USB product ID.
+<u><b>RAW data</b></u> into sector 2 of USB using USB product ID.
 handle = libusb_open_device_with_vid_pid(NULL, 0x05dc, 0xa838); 
 
 - penapp 
