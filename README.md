@@ -1,6 +1,7 @@
 # Feb2018USBDrivers
 USB Driver for USB Mass Storage
 Please see http://www.tovantran.com/blog/?s=usb
+and https://www.pjrc.com/tech/8051/ide/fat32.html
 <pre><code>
 klm is kernel linux module for usb stick
 mass_storage_write mass_storage_read read and write file into usb
@@ -160,7 +161,8 @@ insmod pen_driver.ko
 (check dmesg to see if it has been inserted correctly)
 ./userapp (following the instruction to read and write into USB)
 
-Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and to find the root directory:
+Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and to find out the root directory:
+
 tovantran@kubuntu-vm:~/Ctest/k_r/kernel_hi11Bulk$ sudo dd if=/dev/sdg bs=512 count=1 skip=32768 |xxd
 0000000: 4220 0049 006e 0066 006f 000f 0072 7200  B .I.n.f.o...rr.
 0000010: 6d00 6100 7400 6900 6f00 0000 6e00 0000  m.a.t.i.o...n...
