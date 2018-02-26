@@ -199,7 +199,7 @@ This is the device driver which using system calls:
 </table>
 
 http://opensourceforu.com/2011/12/data-transfers-to-from-usb-devices/ <br>
-Note that a pen drive belongs to a USB mass storage class, which expects a set of SCSI-like commands to be transacted over the bulk endpoints. So, a raw read/write as shown in the code listing below may not really do a data transfer as expected, unless the data is appropriately formatted. But still, this summarises the overall code flow of a USB driver.
+__**Note**__ This a pen drive belongs to a USB mass storage class, which expects a set of SCSI-like commands to be transacted over the bulk endpoints. So, a raw read/write as shown in the code listing below may not really do a data transfer as expected, unless the data is appropriately formatted. But still, this summarises the overall code flow of a USB driver.
 
 
 Following the instruction https://www.pjrc.com/tech/8051/ide/fat32.html to read FAT32 File system and <br>
